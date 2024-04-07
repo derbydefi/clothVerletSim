@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloth Simulation</title>
+    <style>
+        body { text-align: center; }
+        canvas { background: #f0f0f0; border: 1px solid black; }
+    </style>
+</head>
+<body>
+    <h2>Cloth Simulation with Verlet Integration</h2>
+
+
+
+
+
+
+<label for="togglePins">Pin Top Corners</label>
+<input type="checkbox" id="togglePins" name="togglePins" checked>
+
+
+<label for="clothWidth">Width:</label>
+<input type="number" id="clothWidth" name="clothWidth" value="25" min="1" step="1">
+<label for="clothHeight">Height:</label>
+<input type="number" id="clothHeight" name="clothHeight" value="10" min="1" step="1">
+<label for="particleDistance">Particle Distance:</label>
+<input type="number" id="particleDistance" name="particleDistance" value="25" min="1" step="1">
+
+
+
+
+
+<div>
+<label for="clothColor">Color:</label>
+<input type="color" id="clothColor" name="clothColor" value="#67a6e4">
+<label for="clothColor2">Color2:</label>
+<input type="color" id="clothColor2" name="clothColor" value="#5299e0">
+
+<label for="filledMeshToggle">mesh</label>
+<input type="checkbox" id="filledMeshToggle" name="mesh" checked>
+
+</div>
+
+
+
+<label for="tearThreshold">Tear Threshold</label>
+<input type="number" id="tearThreshold" name="tearThreshold" value="150" step="10">
+<label for="gravity">Gravity</label>
+<input type="number" id="gravity" name="gravity" value="9.8" step="0.1">
+<label for="timeStep">Time Step (dt)</label>
+<input type="number" id="timeStep" name="timeStep" value="40" step="10">
+
+    <!-- Canvas will be inserted here by JavaScript -->
+    <script src="index.js"></script>
+ 
+    <div id="interactionMode">
+           <button id="restartSimulation">Restart Simulation</button>
+        <input type="radio" id="drag" name="interactionMode" value="drag" checked>
+        <label for="drag">Drag/Pull/Tear</label>
+        
+        <input type="radio" id="pin" name="interactionMode" value="pin">
+        <label for="pin">Pin/Unpin</label>
+        
+        <input type="radio" id="cut" name="interactionMode" value="cut">
+        <label for="cut">Cut Fabric</label>
+    </div>
+
+   
+</body>
+ 
+</html>
