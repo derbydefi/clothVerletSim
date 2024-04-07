@@ -1,3 +1,4 @@
+//code by derby ;)
 class ClothParticle {
 	constructor(x, y, id, mass = 20) {
 		this.id = id;
